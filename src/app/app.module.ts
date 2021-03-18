@@ -11,7 +11,10 @@ import { NaviComponent } from './components/navi/navi.component';
 import { VatAddedPipe } from './pipes/vat-added.pipe';
 import { from } from 'rxjs';
 import { FilterPipePipe } from './pipes/filter-pipe.pipe';
+
 import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component'
 
 @NgModule({
   declarations: [
@@ -21,13 +24,19 @@ import { ToastrModule } from 'ngx-toastr';
     NaviComponent,
     VatAddedPipe,
     FilterPipePipe,
+    CartSummaryComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass:"toast-bottom-right"
+    })
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
