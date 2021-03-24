@@ -26,6 +26,10 @@ export class CategoryComponent implements OnInit {
     })
   }
 
+  resetCurrentCategory(){
+    this.currentCategory={categoryId:0,categoryName:""};
+  }
+
   setCurrentCategory(category:Category){
       this.currentCategory=category;
   }
