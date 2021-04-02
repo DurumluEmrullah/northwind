@@ -41,7 +41,7 @@
       <td>{{ product.unitPrice | currency }}</td>
       <td>{{ product.unitPrice | vatAdded: 18 | currency }}</td>
       <td>{{ product.unitsInStock }}</td>
-      <td><button (click)="addToCart(product)" type="button" class="btn btn-outline-success">Sepete Ekle</button></td>
+      <td><button (click)="addToCart(product)" type="button" class="btn btn-success">Sepete Ekle</button></td>
     </tr>
   </tbody>
 </table>
